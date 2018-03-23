@@ -1,5 +1,9 @@
 import React from 'react';
+import Link from 'gatsby-link';
 
 export default () => (
-  <div>Hello world!</div>
+  <div>
+    <h1>Hello world!</h1>
+    <Link to="/test-entry">Link to /test-entry</Link>
+  </div>
 );
