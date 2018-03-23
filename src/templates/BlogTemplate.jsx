@@ -1,15 +1,14 @@
 import React from 'react';
 
 const BlogTemplate = props => (
-  <div className="blog-post-container">
-    <div className="blog-post">
-      <h1>{props.data.markdownRemark.frontmatter.title}</h1>
-      <h2>{props.data.markdownRemark.frontmatter.date}</h2>
-      <div
-        className="blog-post-content"
-        dangerouslySetInnerHTML={{ __html: props.data.markdownRemark.html }}
-      />
-    </div>
+  <div>
+    <h1>{props.data.markdownRemark.frontmatter.title}</h1>
+    <h2>{props.data.markdownRemark.frontmatter.date}</h2>
+    {props.data.markdownRemark.frontmatter.thumbnail && (
+      <img src={props.data.markdownRemark.frontmatter.thumbnail} />
+    )}
+    <div dangerouslySetInnerHTML={{ __html: props.data.markdownRemark.html }} />
+    <div dangerouslySetInnerHTML={{ __html: props.data.markdownRemark.body }} />
   </div>
 );
 
@@ -21,6 +20,8 @@ export const pageQuery = graphql`
                 date(formatString: "MMMM DD, YYYY")
                 path
                 title
+                thumbnail
+                body
             }
         }
     }
