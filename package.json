@@ -11,6 +11,8 @@
     "gatsby": "^1.9.238",
     "gatsby-link": "^1.6.39",
     "gatsby-plugin-netlify-cms": "^1.0.12",
+    "gatsby-source-filesystem": "^1.5.27",
+    "gatsby-transformer-remark": "^1.7.37",
     "react": "^16.2.0"
   }
 }
