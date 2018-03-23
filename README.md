@@ -8,3 +8,9 @@ gatsby new gatsby-site https://github.com/gatsbyjs/gatsby-starter-hello-world
 
 ## Running in development
 `gatsby develop`
+
+## netlify-cms-widgets
+[Widgets and docu for netlify cms](https://www.netlifycms.org/docs/widgets/).
+
+## fix graphql-errors
+look at [#2392](https://github.com/gatsbyjs/gatsby/issues/2392), atm simply add one dummy-model with required fields.
